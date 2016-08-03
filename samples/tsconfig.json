@@ -11,9 +11,6 @@
         "out"
     ],
     "files": [
-        "src/SimpleText.ts",
-        "src/SimpleInput.ts",
-        "src/SimpleUI.ts",
         "../typings/index.d.ts"
     ]
 }

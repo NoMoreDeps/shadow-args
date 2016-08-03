@@ -15,3 +15,34 @@
  * BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
  * OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+
+/**
+ * This types provides a description of the command line arguments
+ * format
+ */
+export type CommandArgs = {
+    package: string;
+    command: string;
+    parameters: {
+        [name: string]: string;
+    }
+};
+
+/**
+ * Parse arguments
+ */
+export function prepareCliArguments(...args: string[]): CommandArgs {
+	let res: CommandArgs = <any>{};
+
+	res.package = args.shift() || "help";
+	res.command = args.shift() || "help";
+
+	if (args.length > 0) {
+		res.parameters = {};
+		while (args.length) {
+			let param: string[] = args.shift().split("=");
+			res.parameters[param.shift()] = param.shift() || "";
+		}
+	}
+	return res;
+}
