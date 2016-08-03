@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "shadow args parser module",
   "main": "./bin/Index",
-  "typings": "./bin/index.d.ts",
+  "typings": "./bin/Index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc && tsc -p samples"
