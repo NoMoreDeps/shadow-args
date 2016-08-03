@@ -2,7 +2,7 @@
   "name": "shadow-args",
   "version": "1.0.0",
   "description": "shadow args parser module",
-  "main": "index.js",
+  "main": "./bin/Index",
   "typings": "./bin/index.d.ts",
   "scripts": {
     "test": "jest",
