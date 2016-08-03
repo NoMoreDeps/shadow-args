@@ -1,7 +1,7 @@
 {
-  "name": "shadow-empty",
+  "name": "shadow-args",
   "version": "1.0.0",
-  "description": "shadow empty module",
+  "description": "shadow args parser module",
   "main": "index.js",
   "typings": "./bin/index.d.ts",
   "scripts": {
